@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Prime Numbers</title>
+        <script>
+            var prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+            function find(){
+                //prime number
+                console.log("function running")
+                var found = false;
+                var input = document.getElementById("input").value;
+                var divisible_by = false
+                console.log(input)
+                if(input !== ""){
+                    console.log("if running")
+                    for(var i = 0; i < prime_numbers.length; i++){
+                        console.log("for running")
+                        if(input % prime_numbers[i] === 0 && input / prime_numbers[i] > 1){
+                            console.log(input + " is not prime")
+                            document.getElementById("output1").innerHTML = "<b>" + input + "</b>" + " is a composite number";
+                            found = false;
+                            break;
+                        } else if(input / prime_numbers[i] > 1) {
+                            found = true;
+                            console.log(input + " is not divisble by " + prime_numbers[i]);
+                        }
+                    }
+                    if(found === true){
+                        console.log(input + " is prime")
+                        document.getElementById("output1").innerHTML = "<b>" + input + "</b>"  + " is a prime number";
+                    }
+                }
+
+                //odd or even
+                var input = document.getElementById("input").value;
+                if(input % 2 === 0 && input !== ""){
+                    document.getElementById("output2").innerHTML = "and an <b> Even </b> number";
+                } else if(input % 2 === 1 && input !== "") {
+                    document.getElementById("output2").innerHTML = "and an <b> Odd </b> number";
+                } else {
+                    document.getElementById("output2").innerHTML = "";
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <form action="#" onsubmit="find()">
+            <input type="number" placeholder="Input number" id="input" class="input" autofocus aria-autocomplete="none">
+            <input type="submit" class="submit">
+        </form>
+        <div id="output1" class="output output1"></div>
+        <div id="output2" class="output output2"></div>
+    </body>
+</html>

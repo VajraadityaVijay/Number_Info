@@ -1,0 +1,52 @@
+body{
+    background-image: url(/gradient.png);
+    padding: 5vh 5vh 5vh 5vh;
+    background-size: 100% 100vh;
+}
+
+form{
+    text-align: center;
+    margin-top: 30vh;
+}
+
+input{
+    font-size: 3vw;
+    border-radius: 1.5vw;
+    padding: 1.5vw;
+    opacity: 60%;
+    outline: none;
+    border: none;
+    font-weight: 550;
+}
+
+.submit{
+    font-size: 3vw;
+    margin-left: 1vw;
+}
+
+.input{
+    text-align: center;
+}
+
+.output{
+    text-align: center;
+    font-size: 6em;
+    font-weight: 550;
+    margin-top: 20vh;
+    opacity: 60%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.output1{
+    margin-top: 2vh;
+}
+.output2{
+    margin-top: 4vh;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
