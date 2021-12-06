@@ -4,9 +4,16 @@ body{
     background-size: 100% 100vh;
 }
 
+.header{
+    text-align: center;
+    font-size: 8vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 60%;
+}
+
 form{
     text-align: center;
-    margin-top: 18vh;
+    margin-top: 12vh;
 }
 
 input{
@@ -30,7 +37,7 @@ input{
 
 .output{
     text-align: center;
-    font-size: 6em;
+    font-size: 6vh;
     font-weight: 550;
     margin-top: 20vh;
     opacity: 60%;
