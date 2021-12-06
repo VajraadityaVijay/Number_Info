@@ -45,15 +45,15 @@
                 //factors
                 var input = document.getElementById("input").value;
                 var factors = [];
-                for(var i = 1; i <= 500; i++){
+                for(var i = 1; i <= 1000; i++){
                     if(input % i === 0){
                         factors.push(i);
                     }
                 }
-                if(input <= 500){
+                if(input <= 1000){
                     console.log(factors + "");
                     document.getElementById("output3").innerHTML = "The factors of <b> " + input + " </b> are " + factors + ""
-                } else if(input > 500) {
+                } else if(input > 1000) {
                     console.log(factors + "...")
                     document.getElementById("output3").innerHTML = "The factors of <b> " + input + " </b> are " + factors + "..."
                 }
