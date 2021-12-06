@@ -3,7 +3,7 @@
     <head>
         <title>Number Info</title>
         <script>
-            window.location.replace("https://vajraadityavijay.github.io/Number_Info/?#")
+            window.location.replace ("https://vajraadityavijay.github.io/Number_Info/?#")
             var prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
             function find(){
                 //prime number
@@ -35,22 +35,39 @@
                 //odd or even
                 var input = document.getElementById("input").value;
                 if(input % 2 === 0 && input !== ""){
-                    document.getElementById("output2").innerHTML = "and an <b> Even </b> number";
+                    document.getElementById("output2").innerHTML = "<b>" + input + "</b>" + " is a even number";
                 } else if(input % 2 === 1 && input !== "") {
-                    document.getElementById("output2").innerHTML = "and an <b> Odd </b> number";
+                    document.getElementById("output2").innerHTML = "<b>" + input + "</b>" + " is a odd number";
                 } else {
                     document.getElementById("output2").innerHTML = "";
                 }
+
+                //factors
+                var input = document.getElementById("input").value;
+                var factors = [];
+                for(var i = 1; i <= 500; i++){
+                    if(input % i === 0){
+                        factors.push(i);
+                    }
+                }
+                if(input <= 500){
+                    console.log(factors + "");
+                    document.getElementById("output3").innerHTML = "The factors of <b> " + input + " </b> are " + factors + ""
+                } else if(input > 500) {
+                    console.log(factors + "...")
+                    document.getElementById("output3").innerHTML = "The factors of <b> " + input + " </b> are " + factors + "..."
+                }
             }
         </script>
-        <link rel="stylesheet" href="https://vajraadityavijay.github.io/Number_Info/styles.css">
+        <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
         <form action="#" onsubmit="find()">
-            <input type="number" placeholder="Input number" id="input" class="input" autofocus aria-autocomplete="none">
+            <input type="number" placeholder="Input number" id="input" class="input" autofocus>
             <input type="submit" class="submit">
         </form>
         <div id="output1" class="output output1"></div>
         <div id="output2" class="output output2"></div>
+        <div id="output3" class="output output3"></div>
     </body>
 </html>
